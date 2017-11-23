@@ -1,0 +1,91 @@
+V "GNAT Lib v4.8"
+M P W=b
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_NESTED_FINALIZATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK
+
+U test_jeu%b		test_jeu.adb		33693fbd NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z ada.unchecked_deallocation%s
+W liste_generique%s	liste_generique.adb	liste_generique.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.storage_pools%s  s-stopoo.adb		s-stopoo.ali
+W system.storage_pools.subpools%s  s-stposu.adb	s-stposu.ali
+
+D ada.ads		20121213103024 3ffc8e18
+D a-except.ads		20121213103024 10fcae55
+D a-finali.ads		20121213103024 52ecdc1b
+D a-inteio.ads		20121213103029 f64b89a4
+D a-ioexce.ads		20121213103029 8b9de6cd
+D a-stream.ads		20121213103024 2ca4ee37
+D a-tags.ads		20121213103024 6c0509d0
+D a-textio.ads		20130106093217 386df5d4
+D a-tiinio.ads		20121213103024 aa04e5d6
+D a-unccon.ads		20121213103024 f9eb8f06
+D a-uncdea.ads		20121213103024 f15a5ed1
+D interfac.ads		20121213103024 129923ea
+D i-cstrea.ads		20130106093208 3286f6aa
+D liste_generique.ads	20171123144929 47ca7171
+D liste_generique.adb	20171123150605 250e9af2
+D system.ads		20121213103024 90249111
+D s-crtl.ads		20130106093200 1ea48bce
+D s-exctab.ads		20121213103029 66e51330
+D s-ficobl.ads		20121213103029 55a71d43
+D s-finmas.ads		20121213103024 b95bb341
+D s-finroo.ads		20121213103024 4ff27390
+D s-parame.ads		20121213103024 b6e20cc0
+D s-pooglo.ads		20121213103024 542f33d0
+D s-soflin.ads		20121213103024 24c8153c
+D s-stache.ads		20121213103024 596fc1b4
+D s-stalib.ads		20130106093355 f78bcf95
+D s-stoele.ads		20121213103024 facd7d98
+D s-stoele.adb		20121213103024 afc5dc80
+D s-stopoo.ads		20121213103024 7b8fbeee
+D s-stposu.ads		20121213103024 ffeba1c5
+D s-traent.ads		20121213103024 5221ee41
+D s-unstyp.ads		20121213103024 6ae15c76
+D s-wchcon.ads		20121213103024 bfeb2e3d
+D test_jeu.adb		20171123150600 ba8532bc
+X 1 ada.ads
+16K9*Ada 19e8 34|1r6 1r27 2r5 2r26
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|45] 34|1w10 2r9
+X 8 a-textio.ads
+49K13*Text_IO 471e16 34|1w31 2r30
+X 9 a-tiinio.ads
+65U14*Put 34|10s17[4|18]
+X 14 liste_generique.ads
+18k9*Liste_Generique 57e20 34|3w6 15r21
+19P10 Liste(52R10[34|14]) 34|18r13[14]
+20P10 Iterateur(55R10[34|14]) 34|19r13[14]
+23U15 Affiche_Liste 34|23s9[14]
+26U15 Insere_Tete 34|22s9[14]
+32V14 Creer_Liste{19P10[34|14]} 34|21s14[14]
+52R10 Cellule
+55R10 Iterateur_Interne
+X 34 test_jeu.adb
+6U11*Test_jeu 6b11 24l5 24t13
+8U19 Put_Integer 8b19 8>31 11l13 11t24 15r48
+8i31 I{integer} 10r21
+14K17 liste_Integer[14|18] 16r13
+18p9 L{14|19P10[14]} 21m9 22m24 22r24 23r23
+19p9 It{14|20P10[14]}
+

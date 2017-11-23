@@ -1,0 +1,109 @@
+V "GNAT Lib v4.8"
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_DEALLOCATION
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK
+
+U liste_generique%b	liste_generique.adb	5db8c922 NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+
+U liste_generique%s	liste_generique.ads	47ca7171 BN EE NE OO PK GE
+
+D ada.ads		20121213103024 3ffc8e18
+D a-except.ads		20121213103024 10fcae55
+D a-finali.ads		20121213103024 52ecdc1b
+D a-inteio.ads		20121213103029 f64b89a4
+D a-ioexce.ads		20121213103029 8b9de6cd
+D a-stream.ads		20121213103024 2ca4ee37
+D a-tags.ads		20121213103024 6c0509d0
+D a-textio.ads		20130106093217 386df5d4
+D a-tiinio.ads		20121213103024 aa04e5d6
+D a-unccon.ads		20121213103024 f9eb8f06
+D a-uncdea.ads		20121213103024 f15a5ed1
+D interfac.ads		20121213103024 129923ea
+D i-cstrea.ads		20130106093208 3286f6aa
+D liste_generique.ads	20171123144929 47ca7171
+D liste_generique.adb	20171123150605 250e9af2
+D system.ads		20121213103024 90249111
+D s-crtl.ads		20130106093200 1ea48bce
+D s-exctab.ads		20121213103029 66e51330
+D s-ficobl.ads		20121213103029 55a71d43
+D s-finmas.ads		20121213103024 b95bb341
+D s-finroo.ads		20121213103024 4ff27390
+D s-parame.ads		20121213103024 b6e20cc0
+D s-pooglo.ads		20121213103024 542f33d0
+D s-soflin.ads		20121213103024 24c8153c
+D s-stache.ads		20121213103024 596fc1b4
+D s-stalib.ads		20130106093355 f78bcf95
+D s-stoele.ads		20121213103024 facd7d98
+D s-stoele.adb		20121213103024 afc5dc80
+D s-stopoo.ads		20121213103024 7b8fbeee
+D s-traent.ads		20121213103024 5221ee41
+D s-unstyp.ads		20121213103024 6ae15c76
+D s-wchcon.ads		20121213103024 bfeb2e3d
+X 1 ada.ads
+16K9*Ada 19e8 15|1r6 1r31 2r6 2r23 3r6 22r34
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|45] 15|1w10 1r35
+X 8 a-textio.ads
+49K13*Text_IO 471e16 15|2w10 2r27
+X 11 a-uncdea.ads
+20u15*Unchecked_Deallocation 15|3w10 22r38
+X 14 liste_generique.ads
+10+10 Element 11r16 12r31 13r37 14r37 26r35 44r53 15|13r22 38r57 59r38
+11*5 Sentinelle{10+10} 15|81r39
+12U20 Put 12>24 15|53s17
+12*24 E{10+10}
+13V26 "="{boolean} 13>30 13>33
+13*30 A{10+10}
+13*33 B{10+10}
+14V26 "<"{boolean} 14>30 14>33
+14*30 A{10+10}
+14*33 B{10+10}
+18k9*Liste_Generique 10z10 11z5 12z20 13z26 14z26 57l5 57e20 15|5b14 87l7
+. 87t22
+19P10*Liste(52R10) 23r37 26r55 29r39 32r33 35r35 53c10 15|14r23 17r22 18r24
+. 22r70 25r36 48r31 59r57 60r17 67r44 68r20 69r23 80r37 81r17
+20P10*Iterateur(55R10) 35r49 41r35 44r35 47r29 56c10 15|25r50 30r39 38r39
+. 43r33 49r28
+23U15*Affiche_Liste 23>30 15|48b11 55l13 55t26
+23p30 L{19P10} 15|48b26
+26U15*Insere_Tete 26>28 26=44 15|59b19 63l13 63t24
+26*28 V{10+10} 15|59b32 60r39
+26p44 L{19P10} 15|59b47 60r41 62m13 62r13
+29U15*Libere_Liste 29=28 15|67b19 76l13 76t25
+29p28 L{19P10} 15|67b33 68r29 69r32
+32V14*Creer_Liste{19P10} 15|80b18 84l13 84t24
+35V14*Creer_Iterateur{20P10} 35>31 15|25b18 28l13 28t28
+35p31 L{19P10} 15|25b34 27r47 27r49
+41U15*Suivant 41=23 15|30b19 36l13 36t20 52s65
+41p23 It{20P10} 15|30b27 32r20 35m17 35r17 35r28
+44V14*Element_Courant{10+10} 44>30 15|38b18 41l13 41t28 53s21
+44p30 It{20P10} 15|38b34 40r24
+47V14*A_Suivant{boolean} 47>24 15|43b18 46l7 46t16 51s19
+47p24 It{20P10} 15|43b28 45r12
+49X5*FinDeListe 15|33r31
+52R10 Cellule 53r26 15|12c14 15e19 22r62 60r30 81r30
+55R10 Iterateur_Interne 56r30 15|16c8 19e13 27r28
+X 15 liste_generique.adb
+13*17 Val{14|10+10} 40r34
+14p17 Suiv{14|19P10} 32r30 35r38 45r22 60r43 62m15 68r31 73r30
+17p17 tete{14|19P10}
+18p17 Actuel{14|19P10} 32r22 32r23 35m20 35r30 35r31 40r26 40r27 45r14 45r15
+22U19 Liberer[11|20] 74s17
+49p25 it{14|20P10} 51r29 52m73 52r73 53r37
+60p13 A{14|19P10} 62r23
+68p13 Next{14|19P10} 71r19 72r28 73m17 73r25
+69p13 Current{14|19P10} 72m17 74m25 74r25
+81p13 L{14|19P10} 83r20
+
