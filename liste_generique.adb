@@ -4,11 +4,6 @@ with Ada.Unchecked_Deallocation;
 
 package body liste_generique is
 
-	-- a partir de ce type on peut faire diverse hypotheses sur la facon
-	-- dont la liste est representee, notamment en ce qui concerne la
-	-- liste vide
-
-
 	type Cellule is record
 		Val: Element;
 		Suiv: Liste;
@@ -20,7 +15,6 @@ package body liste_generique is
 
 
 	procedure Liberer is new Ada.Unchecked_Deallocation (Cellule,Liste);
-
 	--Iterateur Code:
 	function Creer_Iterateur(L:Liste) return Iterateur is
 	begin
@@ -48,18 +42,19 @@ package body liste_generique is
 	begin
 	    Liberer(It.Tete) ;
 	    Liberer(It.Actuel) ;
-	    Free_Iterateur(It) ;
+	    --Liberer(It);
 	end Libere_Iterateur ;
----------------------------------------------------------------------------------
+--Fin iterateur code-------------------------------------------------------------------------------
 procedure Affiche_Liste (L:in Liste) is
 			it:iterateur;
   	begin
+			it:= Creer_Iterateur(L);
             while A_Suivant(It) loop
 								Suivant(It);
                 Put(Element_Courant(It));
             end loop;
+			--Libere_Iterateur(it);
   	end Affiche_Liste ;
-
 
   	-- Insertion d'un element V en tete de liste
   	procedure Insere_Tete (V: in Element; L: in out Liste) is
@@ -70,16 +65,18 @@ procedure Affiche_Liste (L:in Liste) is
 
 
 	-- Libere tous les éléments de la liste sauf la sentinelle
-	procedure Libere_Liste (L : in out Liste) is
-	    Next : Liste := L.Suiv ;
-	    Current : Liste := L ;
-	begin
-	    while Next/=null loop
-		Current := Next ;
-		Next := Next.Suiv ;
-		Liberer(Current) ;
-	    end loop ;
-	end Libere_Liste;
+
+		procedure Libere_Liste (L : in out Liste) is
+			Next : Liste := L.Suiv ;
+			Current : Liste := L ;
+		begin
+			Liberer(Current);
+			while Next/=null loop
+				Current := Next ;
+				Next := Next.Suiv ;
+				Liberer(Current) ;
+			end loop ;
+		end Libere_Liste;
 
 
 	-- Creer une liste avec comme seul élément la sentinelle
