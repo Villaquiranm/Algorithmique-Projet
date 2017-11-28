@@ -8,7 +8,6 @@
 
 generic
     type Element is private;
-    Sentinelle:Element;
     with procedure Put(E : in Element);
 	  with function "=" (A, B : Element) return Boolean;
 	  with function "<" (A, B : Element) return Boolean;
@@ -35,7 +34,7 @@ package Liste_Generique is
     function Creer_Iterateur (L : Liste) return Iterateur;
 
     -- Liberation d'un iterateur
-    procedure Libere_Iterateur(It : in out Iterateur);
+    --procedure Libere_Iterateur(It : in out Iterateur);
 
     -- Avance d'une case dans la liste
     procedure Suivant(It : in out Iterateur);

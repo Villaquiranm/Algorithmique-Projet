@@ -1,107 +1,109 @@
-V "GNAT Lib v6"
-A -g
+V "GNAT Lib v4.8"
 P ZX
 
 RN
 RV NO_ALLOCATORS
-RV NO_EXCEPTIONS
 RV NO_IO
 RV NO_LOCAL_ALLOCATORS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_UNCHECKED_DEALLOCATION
-RV NO_DEFAULT_INITIALIZATION
-RV SPARK_05
+RV SPARK
 
-U liste_generique%b	liste_generique.adb	3549da72 NE OO PK GE IL
+U liste_generique%b	liste_generique.adb	fe094d97 NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 
-U liste_generique%s	liste_generique.ads	bdd40098 BN EE NE OO PK GE
+U liste_generique%s	liste_generique.ads	d80a952a BN EE NE OO PK GE
 
-D ada.ads		20070406091342 3ffc8e18 ada%s
-D a-except.ads		20151016123252 291912d5 ada.exceptions%s
-D a-inteio.ads		20070406091342 f64b89a4 ada.integer_text_io%s
-D a-ioexce.ads		20140225151544 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20141120112812 119b8fb3 ada.streams%s
-D a-tags.ads		20151016130316 01f5e3ef ada.tags%s
-D a-textio.ads		20140717063745 386df5d4 ada.text_io%s
-D a-tiinio.ads		20140717063513 aa04e5d6 ada.text_io.integer_io%s
-D a-unccon.ads		20070406091342 f9eb8f06 ada.unchecked_conversion%s
-D a-uncdea.ads		20070406091342 f15a5ed1 ada.unchecked_deallocation%s
-D interfac.ads		20151118101227 4be8ce1b interfaces%s
-D i-cstrea.ads		20140801100435 e53d8b8e interfaces.c_streams%s
-D liste_generique.ads	20171125075134 bdd40098 liste_generique%s
-D liste_generique.adb	20171125080034 b7e1f84b liste_generique%b
-D system.ads		20151123113124 6326c08a system%s
-D s-crtl.ads		20141120112812 0ebbdb71 system.crtl%s
-D s-exctab.ads		20140225151139 54135002 system.exception_table%s
-D s-ficobl.ads		20140718105747 078245e4 system.file_control_block%s
-D s-parame.ads		20140801093848 7e2a0d7f system.parameters%s
-D s-soflin.ads		20151020124036 14e1eb6c system.soft_links%s
-D s-stache.ads		20140225151139 a37c21ec system.stack_checking%s
-D s-stalib.ads		20151112104907 09bd3940 system.standard_library%s
-D s-stoele.ads		20140225151139 2dc34a04 system.storage_elements%s
-D s-traent.ads		20140730135025 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20140731130224 9d58a4c0 system.unsigned_types%s
-D s-wchcon.ads		20140718092328 1b7d22d2 system.wch_con%s
+D ada.ads		20121213103024 3ffc8e18
+D a-except.ads		20121213103024 10fcae55
+D a-finali.ads		20121213103024 52ecdc1b
+D a-inteio.ads		20121213103029 f64b89a4
+D a-ioexce.ads		20121213103029 8b9de6cd
+D a-stream.ads		20121213103024 2ca4ee37
+D a-tags.ads		20121213103024 6c0509d0
+D a-textio.ads		20130106093217 386df5d4
+D a-tiinio.ads		20121213103024 aa04e5d6
+D a-unccon.ads		20121213103024 f9eb8f06
+D a-uncdea.ads		20121213103024 f15a5ed1
+D interfac.ads		20121213103024 129923ea
+D i-cstrea.ads		20130106093208 3286f6aa
+D liste_generique.ads	20171125090327 d80a952a
+D liste_generique.adb	20171125152834 197ffa1c
+D system.ads		20121213103024 90249111
+D s-crtl.ads		20130106093200 1ea48bce
+D s-exctab.ads		20121213103029 66e51330
+D s-ficobl.ads		20121213103029 55a71d43
+D s-finmas.ads		20121213103024 b95bb341
+D s-finroo.ads		20121213103024 4ff27390
+D s-parame.ads		20121213103024 b6e20cc0
+D s-pooglo.ads		20121213103024 542f33d0
+D s-soflin.ads		20121213103024 24c8153c
+D s-stache.ads		20121213103024 596fc1b4
+D s-stalib.ads		20130106093355 f78bcf95
+D s-stoele.ads		20121213103024 facd7d98
+D s-stoele.adb		20121213103024 afc5dc80
+D s-stopoo.ads		20121213103024 7b8fbeee
+D s-traent.ads		20121213103024 5221ee41
+D s-unstyp.ads		20121213103024 6ae15c76
+D s-wchcon.ads		20121213103024 bfeb2e3d
 X 1 ada.ads
-16K9*Ada 19e8 14|1r6 1r31 2r6 2r23 3r6 17r34
-X 3 a-inteio.ads
-18K13*Integer_Text_IO[8|46] 14|1w10 1r35
-X 7 a-textio.ads
-49K13*Text_IO 471e16 14|2w10 2r27
-X 10 a-uncdea.ads
-20u15*Unchecked_Deallocation 14|3w10 17r38
-X 13 liste_generique.ads
-10+10 Element 11r16 12r31 13r37 14r37 26r35 44r53 14|8r22 32r57 60r38
-11*5 Sentinelle{10+10} 14|84r39
-12U20 Put 12>24 14|54s17
-12*24 E{10+10}
-13V26 "="{boolean} 13>30 13>33
+16K9*Ada 19e8 15|1r6 1r31 2r6 2r23 3r6 23r34 24r41
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|45] 15|1w10 1r35
+X 8 a-textio.ads
+49K13*Text_IO 471e16 15|2w10 2r27
+X 11 a-uncdea.ads
+20u15*Unchecked_Deallocation 15|3w10 23r38 24r45
+X 14 liste_generique.ads
+10+10 Element 11r31 12r37 13r37 25r35 43r53 15|11r22 13r18 40r57 73r38
+11U20 Put 11>24 15|67s17
+11*24 E{10+10}
+12V26 "="{boolean} 12>30 12>33
+12*30 A{10+10}
+12*33 B{10+10}
+13V26 "<"{boolean} 13>30 13>33
 13*30 A{10+10}
 13*33 B{10+10}
-14V26 "<"{boolean} 14>30 14>33
-14*30 A{10+10}
-14*33 B{10+10}
-18k9*Liste_Generique 10z10 11z5 12z20 13z26 14z26 52E10 57l5 57e20 14|5b14
-. 90l7 90t22
-19P10*Liste 23r37 26r55 29r39 32r33 35r35 53c10 14|9r23 12r22 13r24 17r70
-. 19r36 48r31 60r57 61r17 69r52 70r32 71r35 83r37 84r17
-20P10*Iterateur 35r49 38r44 41r35 44r35 47r29 56c10 14|19r50 24r39 32r39
-. 37r33 41r48 49r28
-23U15*Affiche_Liste 23>30 14|48b11 57l13 57t26
-23p30 L{19P10} 14|48b26 51r46
-26U15*Insere_Tete 26>28 26=44 14|60b19 64l13 64t24
-26*28 V{10+10} 14|60b32 61r39
-26p44 L{19P10} 14|60b47 61r41 63r13
-29U15*Libere_Liste 29=28 14|69b27 79l21 79t33
-29p28 L{19P10} 14|69b41 70r41 71r44
-32V14*Creer_Liste{19P10} 14|83b18 87l13 87t24
-35V14*Creer_Iterateur{20P10} 35>31 14|19b18 22l13 22t28 51s30
-35p31 L{19P10} 14|19b34 21r47 21r49
-38U15*Libere_Iterateur 38=32 14|41b19 46l13 46t29
-38p32 It{20P10} 14|41b36 43r21 44r21
-41U15*Suivant 41=23 14|24b19 30l13 30t20 53s65
-41p23 It{20P10} 14|24b27 26r20 29r17 29r28
-44V14*Element_Courant{10+10} 44>30 14|32b18 35l13 35t28 54s21
-44p30 It{20P10} 14|32b34 34r24
-47V14*A_Suivant{boolean} 47>24 14|37b18 40l7 40t16 52s19
-47p24 It{20P10} 14|37b28 39r12
-49X5*FinDeListe 14|27r31
-52R10 Cellule 53r26 14|7c14 10e19 17r62 61r30 84r30
-55R10 Iterateur_Interne 56r30 14|11c8 14e13 21r28
-X 14 liste_generique.adb
-8*17 Val{13|10+10} 34r34
-9p17 Suiv{13|19P10} 26r30 29r38 39r22 61r43 63m15 70r43 76r46
-12p17 tete{13|19P10} 43m24
-13p17 Actuel{13|19P10} 26r22 26r23 29m20 29r30 29r31 34r26 34r27 39r14 39r15
-. 44m24
-17U19 Liberer[10|20] 43s13 44s13 73s25 77s33
-49p25 it{13|20P10} 51m25 52r29 53m73 53r73 54r37
-61p13 A{13|19P10} 63r23
-70p25 Next{13|19P10} 74r31 75r44 76m33 76r41
-71p25 Current{13|19P10} 73m33 73r33 75m33 77m41 77r41
-84p13 L{13|19P10} 86r20
+17k9*Liste_Generique 10z10 11z20 12z26 13z26 56l5 56e20 15|5b14 102l7 102t22
+18P10*Liste(51R10) 22r37 25r55 28r39 31r33 34r35 52c10 15|14r19 18r19 19r21
+. 23r70 28r36 62r39 73r57 74r17 81r44 82r20 83r23 94r37 95r17
+19P10*Iterateur(54R10) 34r49 40r35 43r35 46r29 55c10 15|24r87 28r50 34r39
+. 40r39 46r33 52r48 63r22
+22U15*Affiche_Liste 22>30 15|62b19 69l13 69t26
+22p30 L{18P10} 15|62b34 63r51
+25U15*Insere_Tete 25>28 25=44 15|73b19 77l13 77t24
+25*28 V{10+10} 15|73b32 74r39
+25p44 L{18P10} 15|73b47 74r41 76m13 76r13
+28U15*Libere_Liste 28=28 15|81b19 90l13 90t25
+28p28 L{18P10} 15|81b33 82r29 83r32
+31V14*Creer_Liste{18P10} 15|94b18 98l13 98t24
+34V14*Creer_Iterateur{19P10} 34>31 15|28b18 31l13 31t28 63s35
+34p31 L{18P10} 15|28b34 30r43 30r45
+40U15*Suivant 40=23 15|34b19 37l13 37t20 66s17
+40p23 It{19P10} 15|34b27 36m13 36r13 36r26
+43V14*Element_Courant{10+10} 43>30 15|40b18 43l13 43t28 67s21
+43p30 It{19P10} 15|40b34 42r20
+46V14*A_Suivant{boolean} 46>24 15|46b18 49l13 49t22 65s19
+46p24 It{19P10} 15|46b28 48r20
+48X5*FinDeListe
+51R10 Cellule 52r26 15|12c14 15e19 23r62 74r30 95r30
+54R10 Iterateur_Interne 55r30 15|17c14 20e19 24r69 30r24
+X 15 liste_generique.adb
+11*9 Sentinelle{14|10+10} 95r39
+13*13 Val{14|10+10} 42r30
+14p13 Suiv{14|18P10} 36r36 48r30 74r43 76m15 82r31 87r30
+18p13 Tete{14|18P10} 54m24
+19p13 Actuel{14|18P10} 36m16 36r28 36r29 42r22 42r23 48r22 48r23 55m24
+23U19 Liberer[11|20] 54s13 55s13 88s17
+24U19 Free_Iterateur[11|20] 56s13
+52U19 Libere_Iterateur 52b19 52=36 57l13 57t29
+52p36 It{14|19P10} 54m21 54r21 55m21 55r21 56m28
+63p17 It{14|19P10} 65r29 66m25 66r25 67r37
+74p13 A{14|18P10} 76r23
+82p13 Next{14|18P10} 85r19 86r28 87m17 87r25
+83p13 Current{14|18P10} 86m17 88m25 88r25
+95p13 L{14|18P10} 97r20
 

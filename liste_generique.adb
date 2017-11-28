@@ -4,57 +4,70 @@ with Ada.Unchecked_Deallocation;
 
 package body liste_generique is
 
+	-- a partir de ce type on peut faire diverse hypotheses sur la facon
+	-- dont la liste est representee, notamment en ce qui concerne la
+	-- liste vide
+
+	Sentinelle : Element;
 	type Cellule is record
-		Val: Element;
-		Suiv: Liste;
+	    Val: Element;
+	    Suiv: Liste;
 	end record;
-  type Iterateur_Interne is record
-		tete:Liste;
-		Actuel:Liste;
-  end record;
+
+	type Iterateur_Interne is record
+	    Tete: Liste;
+	    Actuel: Liste;
+	end record;
 
 
 	procedure Liberer is new Ada.Unchecked_Deallocation (Cellule,Liste);
+	procedure Free_Iterateur is new Ada.Unchecked_Deallocation (Iterateur_Interne,Iterateur);
+
+
 	--Iterateur Code:
 	function Creer_Iterateur(L:Liste) return Iterateur is
 	begin
-		return new Iterateur_Interne'(L,L);
+	    return new Iterateur_Interne'(L,L);
 	end Creer_Iterateur;
+
 
 	procedure Suivant(It : in out Iterateur) is
 	begin
-		if it.actuel.Suiv=null then
-			raise FinDeListe;
-		end if;
-		it.actuel:=it.actuel.Suiv;
-	end suivant;
+	    It.Actuel := It.Actuel.Suiv;
+	end Suivant;
+
 
 	function Element_Courant(It : Iterateur) return Element is
 	begin
-		return It.actuel.val;
+	    return It.Actuel.Val;
 	end Element_Courant;
 
+
 	function A_Suivant(It : Iterateur) return Boolean is
-  begin
-    return It.actuel.Suiv/=null;
-  end A_Suivant;
+	begin
+	    return It.Actuel.Suiv/=null;
+	end A_Suivant;
+
+
 	procedure Libere_Iterateur(It : in out Iterateur) is
 	begin
 	    Liberer(It.Tete) ;
 	    Liberer(It.Actuel) ;
-	    --Liberer(It);
+	    Free_Iterateur(It) ;
 	end Libere_Iterateur ;
---Fin iterateur code-------------------------------------------------------------------------------
-procedure Affiche_Liste (L:in Liste) is
-			it:iterateur;
+
+
+---------------------------------------------------------------------------------
+
+	procedure Affiche_Liste (L:in Liste) is
+		It : Iterateur := Creer_Iterateur(L);
   	begin
-			it:= Creer_Iterateur(L);
             while A_Suivant(It) loop
-								Suivant(It);
+		Suivant(It);
                 Put(Element_Courant(It));
             end loop;
-			--Libere_Iterateur(it);
   	end Affiche_Liste ;
+
 
   	-- Insertion d'un element V en tete de liste
   	procedure Insere_Tete (V: in Element; L: in out Liste) is
@@ -65,18 +78,16 @@ procedure Affiche_Liste (L:in Liste) is
 
 
 	-- Libere tous les éléments de la liste sauf la sentinelle
-
-		procedure Libere_Liste (L : in out Liste) is
-			Next : Liste := L.Suiv ;
-			Current : Liste := L ;
-		begin
-			Liberer(Current);
-			while Next/=null loop
-				Current := Next ;
-				Next := Next.Suiv ;
-				Liberer(Current) ;
-			end loop ;
-		end Libere_Liste;
+	procedure Libere_Liste (L : in out Liste) is
+	    Next : Liste := L.Suiv ;
+	    Current : Liste := L ;
+	begin
+	    while Next/=null loop
+		Current := Next ;
+		Next := Next.Suiv ;
+		Liberer(Current) ;
+	    end loop ;
+	end Libere_Liste;
 
 
 	-- Creer une liste avec comme seul élément la sentinelle
@@ -85,6 +96,7 @@ procedure Affiche_Liste (L:in Liste) is
 	begin
 	    return L ;
 	end Creer_Liste;
+
 -----------------------------------------------------------------------------------
 
   end liste_generique;

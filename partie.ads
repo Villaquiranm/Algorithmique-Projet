@@ -12,6 +12,8 @@ generic
     Nom_Joueur2 : String;
     -- Calcule l'etat suivant en appliquant le coup
     with function Etat_Suivant(E : Etat; C : Coup) return Etat;
+    -- Indique si on peut encore jouer 
+    with function Est_Fini(E : Etat) return Boolean;
     -- Indique si l'etat courant est gagnant pour le joueur J
     with function Est_Gagnant(E : Etat; J : Joueur) return Boolean; 
     -- Indique si l'etat courant est un status quo (match nul)
